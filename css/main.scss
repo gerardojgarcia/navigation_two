@@ -465,12 +465,16 @@ nav {
         transform: rotate(360deg);
         }
         
+        
 
       }
 
-       
+      @media screen and (min-width: 1440px){
+        margin-top: 36%;
+        
+      }
 
-      @media screen and (max-width: 1200px){
+      @media screen and (min-width: 1200px){
         font-size: 1.5rem;
         
       }
@@ -522,13 +526,15 @@ nav {
   width: 90%;
 
   margin: 0 auto;
+  margin-top: 200px;
  
-  border: 1px solid black;
+  border: 2px solid black;
 
 
 
   h3 {
     font-size: 4rem;
+    padding-bottom: 50px;
   }
 }
 
@@ -537,7 +543,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  border: 1px solid black;
+  
   height: 100%;
   width: 100%;
   margin: 0 auto;
@@ -545,12 +551,41 @@ nav {
 
   .about_box-item {
 
-    border: 1px solid black;
+    border-top: 2px solid black;
 
+    
 
 
       .item-title {
         font-size: 2rem;
+        padding: 15px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 30px;
       }
   }
+}
+
+.about_box-item:nth-child(2) {
+  border-left: 2px solid black;
+
+}
+
+.about_box-item:nth-child(4) {
+  border-left: 2px solid black;
+
+}
+
+
+.about_box-buttons {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  border-top: 2px solid black;
+
+
 }

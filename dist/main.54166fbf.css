@@ -343,7 +343,12 @@ nav {
   background-color: transparent;
   transform: rotate(360deg);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1440px) {
+  .hero_main .hero-info .hero-btn {
+    margin-top: 36%;
+  }
+}
+@media screen and (min-width: 1200px) {
   .hero_main .hero-info .hero-btn {
     font-size: 1.5rem;
   }
@@ -372,26 +377,49 @@ nav {
 .about_box {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid black;
+  margin-top: 200px;
+  border: 2px solid black;
 }
 .about_box h3 {
   font-size: 4rem;
+  padding-bottom: 50px;
 }
 
 .about_box-items {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  border: 1px solid black;
   height: 100%;
   width: 100%;
   margin: 0 auto;
 }
 .about_box-items .about_box-item {
-  border: 1px solid black;
+  border-top: 2px solid black;
 }
 .about_box-items .about_box-item .item-title {
   font-size: 2rem;
+  padding: 15px;
+}
+.about_box-items .about_box-item p {
+  font-size: 1.2rem;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+}
+
+.about_box-item:nth-child(2) {
+  border-left: 2px solid black;
+}
+
+.about_box-item:nth-child(4) {
+  border-left: 2px solid black;
+}
+
+.about_box-buttons {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  border-top: 2px solid black;
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */
