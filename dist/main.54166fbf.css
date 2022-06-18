@@ -477,7 +477,7 @@ nav {
 #box_button:hover {
   background-color: #CDB4ff;
   box-shadow: 7px 4px 0px 2px black;
-  transform: translateY(5px) translateX(5px);
+  transform: translateY(-5px) translateX(-5px);
 }
 
 .about_box-buttons:hover .box_buttons {
