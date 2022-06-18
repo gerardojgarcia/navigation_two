@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --bg-clr: #d9dad8;
+  --accent-clr: #B4FFC9;
+  --font-clr: #CDB4ff;
+  --body-fnt: "Helvetica";
+  --title-fnt: "'Martel Sans', sans-serif;" ;
+}
+
+body {
+  background-color: var(--bg-clr);
+  width: auto;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  height: 50px;
+  position: fixed;
+  background-color: var(--bg-clr);
+  border: 2px solid black;
+  z-index: 3;
+  top: 0px;
+  box-sizing: border-box;
+}
+
+/**Navigation Styles **/
+nav {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: var(--title-fnt);
+  border-right: 2px solid black;
+}
+
+.nav-links {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--body-fnt);
+  border-right: 2px solid black;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  transition: ease-in-out 300ms;
+}
+.nav-links a:hover {
+  background-color: var(--accent-clr);
+}
+@media screen and (max-width: 1200px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+.hamburger-btn {
+  display: flex;
+  background-color: var(--bg-clr);
+  border: 2px solid black;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  left: 75%;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 500ms;
+}
+@media screen and (min-width: 1200px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+.ham-top, .ham-middle, .ham-bottom {
+  width: 15px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  right: 3px;
+  top: 4px;
+  transform: rotate(0deg);
+}
+
+.open {
+  transform: translateY(0px) rotate(90deg);
+}
+
+.open .ham-top {
+  transform: translateY(5px) translate(5px) rotate(45deg);
+}
+
+.opem .ham-middle {
+  display: none;
+}
+
+.open .ham-bottom {
+  transform: translateY(5px) tralsate(5px);
+  transform: rotate(-45deg);
+}
+
+.ham-middle {
+  transform: translateY(5px);
+}
+
+.ham-bottom {
+  transform: translateY(10px);
+}
+
+.mobile-menu {
+  display: none;
+  flex-flow: column nowrap;
+  width: 50%;
+  left: 50%;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.menu-links {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--accent-clr);
+  height: 100vh;
+  padding-top: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.menu-links a {
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: var(--title-fnt);
+  border: 2px solid black;
+  margin: 10px;
+  text-align: center;
+  width: 65%;
+  text-transform: uppercase;
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+/* Main Container styles */
+.container__main {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  border: 2px solid black;
+  padding-bottom: 100vh;
+}
+
+/* hero styles */
+.hero {
+  margin-top: 48px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  border: 2px solid blue;
+  height: 100vh;
+}
+
+.hero_main {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .hero_main {
+    flex-flow: column nowrap;
+  }
+}
+.hero_main .hero-info {
+  width: 50%;
+  height: 100%;
+  border: 1px solid black;
+}
+@media screen and (max-width: 1200px) {
+  .hero_main .hero-info {
+    width: 100%;
+  }
+}
+.hero_main .hero-img {
+  background-image: url(/profile.8eeaf93c.png);
+  width: 50%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 1200px) {
+  .hero_main .hero-img {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=/main.54166fbf.css.map */
