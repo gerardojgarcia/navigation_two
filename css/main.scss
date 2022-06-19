@@ -112,7 +112,7 @@ header {
     position: fixed;
     background-color: var(--bg-clr);
     border: 2px solid black;
-    z-index: 3;
+    z-index: 25;
     top: 0px;
     box-sizing: border-box;
 
@@ -409,12 +409,16 @@ nav {
 
 
       h1 {
-        font-size: 7rem;
+        font-size: 6rem;
+        font-family: var(--body-fnt);
+
 
       }
 
       h2 {
         font-size: 2.5rem;
+        font-family: var(--body-fnt);
+
       }
 
     }
@@ -424,7 +428,7 @@ nav {
 
     .hero-btn {
       display:flex;
-      margin-top: 40%;
+      margin-top: 41%;
       background-color: var(--font-clr);
       border: none; 
       height: 100px;
@@ -469,7 +473,7 @@ nav {
 
       }
 
-      @media screen and (min-width: 1440px){
+      @media screen and (min-width: 2200px){
         margin-top: 36%;
         
       }
@@ -592,6 +596,7 @@ nav {
   width: 100%;
   border-top: 2px solid black;
   overflow: hidden;
+  position: relative;
  
  
    
@@ -626,10 +631,10 @@ nav {
   display: flex;
   visibility: hidden;
   position: absolute;
-  flex-flow: row nowrap;
-  margin-left: 25px;
+  flex-flow: row;
+  margin-left: 30px;
   transition: all 500ms ease-in;
-  width: 80%;
+  width: 90%;
   opacity: 0;
   
   transform: translateY(-200px);
@@ -639,9 +644,10 @@ nav {
 #box_button {
   display: flex;
   
-  width: 150px;
+  width: 400px;
   height: 50px;
   border-radius: 100vw;
+  padding: 15px;
 
   justify-content: center;
   text-align: center;
@@ -665,7 +671,7 @@ nav {
 
 .about_box-buttons:hover .box_buttons {
   visibility: visible;
-  transform: translateY(20px) ;
+  transform: translateY(30px) ;
   opacity: 1;
 }
 
