@@ -717,3 +717,136 @@ nav {
 
 
 }
+
+/*CTA Style */
+
+.cta-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #343434;
+
+
+}
+
+
+.cta-box {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.cta-box-info {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+  width: 50%;
+  margin-top:15%;
+  margin-bottom: 15%;
+  
+
+    strong {
+      font-size: 3.9rem;
+      width: 65%;
+      margin: 0 auto;
+      color: var(--accent-clr);
+
+
+    }
+
+}
+
+.cta-form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 50%;
+
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 45%;
+      margin: 0 auto;
+      margin-top:15%;
+      margin-bottom: 15%;
+
+      label {
+        font-family: var(--body-fnt);
+        color: white;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 2rem;
+
+
+
+      }
+
+      input {
+        margin-bottom: 50px;
+        border: 2px solid white;
+        background-color: #343434;
+        font-size: 2rem;
+
+      }
+
+      textarea {
+        background-color: #343434;
+        border: 2px solid white;
+        margin-bottom: 50px;
+
+      }
+
+      .form-btn {
+        display:flex;
+        
+        background-color: var(--font-clr);
+        border: none; 
+        height: 100px;
+        font-size: 3rem;
+        font-family: var(--body-fnt);
+        text-transform: uppercase;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        align-items:center;
+        justify-content: center;
+        text-align: center;
+        transition: all 300ms ease-in-out;
+  
+        text-decoration: none;
+        color: black;
+        
+  
+        #form-btn-icon {
+  
+          background-color: var(--font-clr);
+          transition: all 700ms ease-in-out;
+          transform: rotate(0deg);
+          margin-left: 15px;
+          margin-bottom: 3px;
+          padding: 0px;
+        }
+  
+        &:hover  {
+  
+          border: 5px solid black;
+  
+  
+          #form-btn-icon{
+            background-color: transparent;
+  
+          transform: rotate(360deg);
+          }
+          
+          
+  
+        }
+      }
+      
+    }
+}
