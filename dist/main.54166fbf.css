@@ -728,10 +728,11 @@ h4 {
   display: flex;
   flex-flow: column nowrap;
   width: 90%;
-  height: 100vh;
+  height: auto;
   border: 2px solid black;
   margin: 0 auto;
   font-family: var(--body-fnt);
+  margin-top: 50px;
 }
 
 h5 {
@@ -741,45 +742,63 @@ h5 {
 
 .exp-info {
   border-bottom: 2px solid black;
-  border-top: 2px solid black;
   padding: 50px;
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  transition: all 500ms ease-in-out;
 }
 
 .exp-descr {
-  width: 25%;
+  width: 65%;
   visibility: hidden;
+  transition: opacity 500ms ease-in-out;
+  opacity: 0;
+  font-size: 1rem;
+  margin-right: 25px;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 200px;
+}
+.exp-descr ul {
+  width: 50%;
 }
 
 .exp-box {
   margin: 25px;
   text-transform: uppercase;
-  width: 25%;
+  width: 35%;
   cursor: pointer;
-  border: 2px solid black;
   display: flex;
+  transition: all 200ms ease-in-out;
 }
 .exp-box .exp-label {
-  font-size: 2rem;
+  font-size: 1.5rem;
   width: auto;
   margin-right: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: text-decoration 500ms ease-in-out;
 }
 .exp-box .exp-label i {
   font-size: 0.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .exp-box .exp-label:hover {
-  color: var(--accent-clr);
   text-decoration: underline;
 }
-.exp-box .exp-label:hover .exp-descr {
-  display: flex;
+
+.exp-box:hover + .exp-descr {
+  visibility: visible;
+  opacity: 1;
+}
+
+.border-top {
+  border-top: 2px solid black;
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */
