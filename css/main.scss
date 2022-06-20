@@ -811,8 +811,8 @@ nav {
         text-transform: uppercase;
         cursor: pointer;
         box-sizing: border-box;
-        border-top: 2px solid black;
-        border-bottom: 2px solid black;
+        border: 2px solid black;
+       
         align-items:center;
         justify-content: center;
         text-align: center;
@@ -849,4 +849,129 @@ nav {
       }
       
     }
+}
+
+
+/* work section */
+
+
+.work_container {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+
+}
+
+
+h4 {
+  font-size: 4rem;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  
+  padding: 25px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  border: 2px solid black;
+
+  width: 85%;
+  margin: 0 auto;
+
+
+  .work-card:nth-child(1){
+    border-bottom: 2px solid black;
+  }
+
+  .work-card:nth-child(2){
+    border-bottom: 2px solid black;
+  }
+  
+
+}
+
+
+
+.work-card {
+  width: 100%;
+  height: 900px;
+  
+  border-left: 2px solid black;
+  margin: 0 auto;
+  
+   .work-btn  {
+
+    display:flex;
+        
+    background-color: var(--font-clr);
+    border: none; 
+    height: 100px;
+    font-size: 3rem;
+    font-family: var(--body-fnt);
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+   
+    align-items:center;
+    justify-content: center;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+
+    text-decoration: none;
+    color: black;
+
+    #work-btn-icon {
+  
+      background-color: var(--font-clr);
+      transition: all 700ms ease-in-out;
+      transform: rotate(0deg);
+      margin-left: 15px;
+      margin-bottom: 3px;
+      padding: 0px;
+    }
+
+    &:hover  {
+
+      border: 5px solid black;
+
+
+      #work-btn-icon{
+        background-color: transparent;
+
+      transform: rotate(360deg);
+      }
+      
+      
+
+    }
+  }
+  
+
+}
+
+
+.work-card-title {
+  padding: 50px;
+  margin-bottom: 620px;
+
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  
+
+  strong {
+    font-size: 1.9rem;
+
+  }
+
+}
+
+#work-card1 {
+  background-image: url(../images/profile.png);
 }
