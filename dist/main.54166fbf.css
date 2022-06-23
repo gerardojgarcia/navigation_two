@@ -264,7 +264,6 @@ nav {
   flex-flow: column nowrap;
   width: 100%;
   border: 2px solid black;
-  padding-bottom: 100vh;
 }
 
 /* hero styles */
@@ -737,7 +736,7 @@ h4 {
 
 h5 {
   font-size: 4rem;
-  border-bottom: 2px solid black;
+  padding: 0px;
 }
 
 .exp-info {
@@ -802,10 +801,6 @@ h5 {
 }
 
 /*Contact Style */
-.contact {
-  height: 50vh;
-}
-
 .contact-container {
   display: flex;
   flex-flow: column nowrap;
@@ -826,12 +821,12 @@ h5 {
 .contact-info {
   display: flex;
   flex-flow: column nowrap;
+  border-right: 2px solid black;
   width: 50%;
 }
 .contact-info strong {
   font-size: 4rem;
   border-bottom: 2px solid black;
-  border-right: 2px solid black;
   padding-left: 25px;
 }
 .contact-info .contact-info-details {
@@ -872,11 +867,14 @@ h5 {
   width: 100%;
   padding: 75px;
   width: 100%;
+  background-color: #343434;
+  color: var(--accent-clr);
 }
 .cta-two .cta-two-box .cta-two-info {
   font-size: 1.7rem;
   width: 45%;
   padding-left: 50px;
+  padding-bottom: 50px;
 }
 .cta-two .cta-two-box .contact-btn {
   width: 100%;
@@ -888,6 +886,44 @@ h5 {
   color: black;
   text-transform: uppercase;
   font-size: 2rem;
+}
+
+/* footer style */
+footer {
+  width: 100%;
+}
+
+.footer-nav-links {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  margin: 0 auto;
+}
+.footer-nav-links a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-family: var(--body-fnt);
+  border-right: 2px solid black;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  transition-property: background-color;
+  transition: ease-in-out 500ms;
+}
+.footer-nav-links a:hover {
+  background-color: var(--accent-clr);
+}
+@media screen and (max-width: 1200px) {
+  .footer-nav-links {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */
