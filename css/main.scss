@@ -1109,9 +1109,151 @@ transition: all 200ms ease-in-out;
 
 .border-top {
   border-top: 2px solid black;
+
+
+  
 }
 
 
 
+/*Contact Style */
+
+.contact {
+  height: 50vh;
+}
+
+.contact-container {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 100%;
+  
+  justify-content: center;
+  font-family: var(--body-fnt);
+
+}
 
 
+.contact-box {
+  display: flex;
+  flex-flow: row nowrap;
+
+  width: 90%;
+  border: 2px solid black;
+
+  margin: 0 auto;
+  margin-top: 50px;
+
+
+   
+}
+
+
+.contact-info {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 50%;
+  
+
+
+  strong {
+    font-size: 4rem;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    padding-left: 25px;
+  
+}
+
+  .contact-info-details {
+    padding: 75px;
+    width: 100%;
+
+
+    i {
+      padding-right: 10px;
+    }
+
+    #contact-email {
+
+      font-size: 1.7rem;
+    }
+  #contact-phone {
+
+      font-size: 1.7rem;
+    }
+
+
+
+    #contact-social {
+      display: flex;
+      flex-flow: row nowrap;
+
+      font-size: 1.7rem;
+
+        p {
+          padding-right: 25px;
+        }
+
+      
+    }
+  }
+
+}
+
+.cta-two {
+  display: flex;
+  flex-flow: column nowrap;
+
+  width: 50%;
+  
+
+
+  strong {
+    font-size: 4rem;
+    border-bottom: 2px solid black;
+  
+    padding-left: 25px;
+  
+}
+
+.cta-two-box {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+  padding: 75px;
+    width: 100%;
+
+    .cta-two-info {
+      font-size: 1.7rem;
+      width: 45%;
+      padding-left: 50px;
+    
+    }
+
+
+   .contact-btn {
+      width: 100%;
+
+      background-color: var(--font-clr);
+      box-sizing: border-box;
+      text-decoration: none;
+
+      text-align: center;
+      padding: 25px;
+
+      color: black;
+      text-transform: uppercase;
+      font-size: 2rem;
+
+
+
+    }
+}
+ 
+
+
+
+
+
+}
