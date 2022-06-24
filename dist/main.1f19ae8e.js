@@ -118,12 +118,69 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"main.js":[function(require,module,exports) {
-var navItemEl = document.querySelectorAll('.nav-item');
+var navItemEl = document.getElementById('nav-link');
 var hamBtn = document.getElementById('ham-btn');
-var mobileMenu = document.querySelector('mobile-menu');
+var navItems = document.querySelector('.nav-links');
+var mobileMenu = document.querySelector('.mobile-menu');
+var navHome = document.getElementById('nav-home');
+var navAbout = document.getElementById('nav-about');
+var navWork = document.getElementById('nav-work');
+var navExp = document.getElementById('nav-exp');
+var navContact = document.getElementById('nav-contact');
 hamBtn.addEventListener('click', function () {
   console.log('i was clicked');
-}); //// Navigation Selection
+  hamBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('visible');
+}); //// Navigation 'Selected' Style///
+
+navHome.addEventListener('click', function () {
+  navHome.classList.toggle('selected');
+  removeSelected(navAbout);
+  removeSelected(navExp);
+  removeSelected(navContact);
+  removeSelected(navWork);
+});
+navAbout.addEventListener('click', function () {
+  navAbout.classList.toggle('selected'); //navHome.classList.toggle('selected')
+  //navWork.classList.toggle('selected')
+
+  removeSelected(navHome);
+  removeSelected(navWork);
+  removeSelected(navExp);
+  removeSelected(navContact);
+});
+navWork.addEventListener('click', function () {
+  navWork.classList.toggle('selected');
+  removeSelected(navHome);
+  removeSelected(navAbout);
+  removeSelected(navExp);
+  removeSelected(navContact);
+});
+navExp.addEventListener('click', function () {
+  navExp.classList.toggle('selected');
+  removeSelected(navHome);
+  removeSelected(navAbout);
+  removeSelected(navWork);
+  removeSelected(navContact);
+});
+navContact.addEventListener('click', function () {
+  navContact.classList.toggle('selected');
+  removeSelected(navHome);
+  removeSelected(navAbout);
+  removeSelected(navExp);
+  removeSelected(navWork);
+}); /////////   
+///for(let i = 0; i < navItems.children.length; i++) {}
+/// Remove Selected Function////  
+
+function removeSelected(navlink) {
+  if (navlink.classList.contains('selected') == true) {
+    navlink.classList.remove('selected');
+    console.log('removed');
+  } else {
+    console.log('nothing to do');
+  }
+} ////////////////////////////////////////////////////////////////////////
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -152,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36669" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32811" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

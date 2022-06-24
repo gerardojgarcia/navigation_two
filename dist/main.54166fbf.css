@@ -161,19 +161,18 @@ nav {
 .hamburger-btn {
   display: flex;
   background-color: var(--bg-clr);
-  border: 2px solid black;
   width: 25px;
   height: 25px;
   margin: 5px;
   margin-right: 15px;
   margin-left: 215px;
+  border: none;
   align-self: center;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   position: relative;
   transition: all 500ms;
-  z-index: 5;
 }
 @media screen and (min-width: 1200px) {
   .hamburger-btn {
@@ -182,7 +181,7 @@ nav {
 }
 
 .ham-top, .ham-middle, .ham-bottom {
-  width: 15px;
+  width: 25px;
   height: 2px;
   background-color: black;
   position: absolute;
@@ -199,7 +198,7 @@ nav {
   transform: translateY(5px) translate(5px) rotate(45deg);
 }
 
-.opem .ham-middle {
+.open .ham-middle {
   display: none;
 }
 
@@ -209,20 +208,22 @@ nav {
 }
 
 .ham-middle {
-  transform: translateY(5px);
+  transform: translateY(7px);
 }
 
 .ham-bottom {
-  transform: translateY(10px);
+  transform: translateY(14px);
 }
 
 .mobile-menu {
-  display: none;
+  display: flex;
+  visibility: hidden;
   flex-flow: column nowrap;
   width: 50%;
   left: 50%;
   margin-top: 50px;
   height: 100vh;
+  position: absolute;
 }
 
 .menu-links {
@@ -230,9 +231,10 @@ nav {
   flex-flow: column nowrap;
   background-color: var(--accent-clr);
   height: 100vh;
-  padding-top: 50%;
+  padding-top: 25%;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 .menu-links a {
   font-size: 2rem;
@@ -248,6 +250,10 @@ nav {
 
 .flex {
   display: flex;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .opacity {
@@ -858,6 +864,7 @@ h5 {
   display: flex;
   flex-flow: column nowrap;
   width: 50%;
+  /* footer style */
 }
 .cta-two strong {
   font-size: 4rem;
@@ -889,44 +896,21 @@ h5 {
   color: black;
   text-transform: uppercase;
   font-size: 2rem;
+  transition: all 500ms;
 }
-
-/* footer style */
-footer {
+.cta-two .cta-two-box .contact-btn #work-btn-icon {
+  transform: rotate(0deg);
+  transition: all 500ms;
+}
+.cta-two .cta-two-box .contact-btn:hover {
+  border: 5px solid black;
+}
+.cta-two .cta-two-box .contact-btn:hover #work-btn-icon {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+.cta-two footer {
   width: 100%;
-}
-
-.footer-nav-links {
-  width: 90%;
-  height: 100%;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-evenly;
-  align-items: center;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  margin: 0 auto;
-}
-.footer-nav-links a {
-  text-decoration: none;
-  color: black;
-  text-transform: uppercase;
-  font-family: var(--body-fnt);
-  border-right: 2px solid black;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  padding: 25px;
-  transition-property: background-color;
-  transition: ease-in-out 500ms;
-}
-.footer-nav-links a:hover {
-  background-color: var(--accent-clr);
-}
-@media screen and (max-width: 1200px) {
-  .footer-nav-links {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=/main.54166fbf.css.map */
