@@ -263,6 +263,7 @@ nav {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
+  padding-bottom: 15vh;
   border: 2px solid black;
 }
 
@@ -827,7 +828,7 @@ h5 {
 .contact-info strong {
   font-size: 4rem;
   border-bottom: 2px solid black;
-  padding-left: 25px;
+  padding: 25px;
 }
 .contact-info .contact-info-details {
   padding: 75px;
@@ -845,6 +846,8 @@ h5 {
 .contact-info .contact-info-details #contact-social {
   display: flex;
   flex-flow: row nowrap;
+  width: 55%;
+  margin-top: 25px;
   font-size: 1.7rem;
 }
 .contact-info .contact-info-details #contact-social p {
@@ -859,7 +862,7 @@ h5 {
 .cta-two strong {
   font-size: 4rem;
   border-bottom: 2px solid black;
-  padding-left: 25px;
+  padding: 25px;
 }
 .cta-two .cta-two-box {
   display: flex;

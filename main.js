@@ -8,3 +8,11 @@ const mobileMenu = document.querySelector('mobile-menu')
 hamBtn.addEventListener('click', () => {
     console.log('i was clicked')
 })
+
+
+
+
+//// Navigation Selection
+
+
+
