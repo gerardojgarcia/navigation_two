@@ -100,6 +100,14 @@ body {
     width: auto;
     height: 100vh;
 
+    @media screen and (max-width: 1200px) {
+      max-width: 1200px;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 500px;
+      
+    }
 
 }
 
@@ -116,6 +124,10 @@ header {
     top: 0px;
     box-sizing: border-box;
 
+    @media screen and (max-width: 1200px) {
+      width: auto;
+    }
+   
 
 }
 
@@ -129,11 +141,11 @@ nav {
     display: flex;
     flex-flow: row nowrap;
     height: 75px;
-    width: 100%;
+    width: auto;
     justify-content: center;
     align-items: center;  
 
-
+  
 
 
 }
@@ -156,6 +168,19 @@ nav {
       padding: 0px;
       padding-top: 10px;
       align-items: center;
+      height: 50px;
+      padding-left: 0px;
+
+    }
+
+    @media screen and (max-width: 500px){
+      border: none;
+      padding: 0px;
+      padding-top: 10px;
+      align-items: center;
+      height: 50px;
+      padding-left: 0px;
+      
     }
     
 
@@ -362,6 +387,16 @@ nav {
   width: 100%;
   padding-bottom: 15vh;
   border: 2px solid black;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+
+  @media screen and (min-width: 1200px) {
+    width: auto;
+    
+  }
+
+  
   
 }
 
@@ -380,6 +415,8 @@ nav {
   height: 100vh;
 
   @media screen and (max-width: 1200px) {
+    width: auto;
+    margin-top: 75px;
 
     
   }
@@ -395,12 +432,13 @@ nav {
 
 
   @media screen and (max-width: 1200px) {
-    flex-flow: column nowrap;
+    flex-flow: column-reverse nowrap;
+    width: auto;
   }
 
 
   .hero-info {
-    width: 50%;
+    width: 100%;
     height: 100vh;
 
     display: flex;
@@ -408,7 +446,8 @@ nav {
 
 
     @media screen and (max-width: 1200px) {
-      width: 100%;
+      width: auto;
+      
     }
     
 
@@ -431,6 +470,29 @@ nav {
         font-family: var(--body-fnt);
 
       }
+
+
+      @media screen and (max-width: 1200px) {
+        flex-flow: column nowrap;
+        width: auto;
+
+        padding: 0px;
+        margin-top: 76px;
+
+        h1 {
+          font-size: 3rem;
+
+
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+
+      }
+    
+
 
     }
 
@@ -494,6 +556,11 @@ nav {
         
       }
 
+      @media screen and (max-width: 600px) {
+        font-size: 1.2rem;
+        
+      }
+
 
     }
 
@@ -516,6 +583,7 @@ nav {
 
     @media screen and (max-width: 1200px) {
       width: 100%;
+      
 
     }
   }
@@ -531,9 +599,12 @@ nav {
 
 .about {
   width: 100%;
-  height: 100vh;
+  
 
-
+@media screen and (max-width:1200px){
+  width: auto;
+  
+}
 
 }
 
@@ -553,6 +624,20 @@ nav {
     font-family: var(--body-fnt);
     padding: 15px;
   }
+
+  @media screen and (max-width:1200px){
+    width: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+    h3 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+  }
+
+
 }
 
 
@@ -561,10 +646,18 @@ nav {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   
-  height: 100%;
+  
   width: 100%;
   margin: 0 auto;
 
+
+    @media screen and (max-width: 1200px){
+      width: auto;
+      display: flex;
+      flex-flow: column nowrap;
+     
+      
+    }
 
   .about_box-item {
 
@@ -585,6 +678,17 @@ nav {
         padding-right: 100px;
         padding-bottom: 30px;
         font-family: var(--body-fnt);
+
+
+      }
+
+      @media screen and (max-width: 768px){
+        width: auto;
+        
+        p {
+          width: auto;
+        }
+        
       }
   }
 }
@@ -608,6 +712,17 @@ nav {
   border-top: 2px solid black;
   overflow: hidden;
   position: relative;
+
+
+  @media screen and (max-width:1200px){
+    width: auto;
+   
+  }
+
+  @media screen and (max-width:600px){
+    display: none;
+    
+  }
  
  
    
@@ -729,7 +844,7 @@ nav {
 
 }
 
-/*CTA Style */
+/*CTA Style */////////////
 
 .cta-container {
   width: 100%;
@@ -737,6 +852,11 @@ nav {
   flex-flow: column nowrap;
   background-color: #343434;
 
+
+  @media screen and (max-width: 600px){
+    display: none;
+    
+  }
 
 }
 
@@ -874,6 +994,13 @@ nav {
   width: 100%;
   font-family: var(--body-fnt);
 
+
+  @media screen and (max-width: 768px){
+    width: auto;
+    background-color: #d9dad8;
+    
+  }
+
 }
 
 
@@ -903,6 +1030,13 @@ h4 {
     border-bottom: 2px solid black;
   }
   
+  @media screen and (max-width: 768px){
+    width: auto;
+    background-color: #d9dad8;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
 
 }
 
@@ -965,6 +1099,16 @@ h4 {
     }
   }
   
+  @media screen and (max-width: 768px){
+    width: auto;
+    height: 500px;
+
+
+    .work-btn {
+      font-size: 2rem;
+    }
+    
+  }
 
 }
 
@@ -983,6 +1127,12 @@ h4 {
   strong {
     font-size: 1.9rem;
 
+  }
+
+  @media screen and (max-width: 768px){
+    width: auto;
+    margin-bottom: 220px;
+    
   }
 
 }
@@ -1268,7 +1418,7 @@ transition: all 200ms ease-in-out;
 
       &:hover { 
         border: 5px solid black;
-
+        background-color: #B4FFC9;
 
         #work-btn-icon{
           background-color: transparent;
