@@ -261,10 +261,13 @@ nav {
   position: absolute;
   transition: 500ms;
   background-color: var(--bg-clr);
+  font-family: var(--body-fnt);
 }
 .menu-items a {
   padding-bottom: 10px;
   font-size: 2rem;
+  color: black;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1200px) {
   .menu-items {
@@ -767,7 +770,7 @@ h4 {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   border: 2px solid black;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
 }
 .work-grid .work-card:nth-child(1) {
@@ -1019,6 +1022,11 @@ h3 {
   margin: 0 auto;
   margin-top: 50px;
 }
+@media screen and (max-width: 1200px) {
+  .contact-box {
+    flex-flow: column nowrap;
+  }
+}
 
 .contact-info {
   display: flex;
@@ -1035,6 +1043,9 @@ h3 {
   padding: 75px;
   width: 100%;
 }
+.contact-info .contact-info-details p {
+  width: 90%;
+}
 .contact-info .contact-info-details i {
   padding-right: 10px;
 }
@@ -1046,13 +1057,18 @@ h3 {
 }
 .contact-info .contact-info-details #contact-social {
   display: flex;
-  flex-flow: row nowrap;
-  width: 55%;
+  flex-flow: column nowrap;
+  width: 85%;
   margin-top: 25px;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 .contact-info .contact-info-details #contact-social p {
   padding-right: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .contact-info {
+    width: 100%;
+  }
 }
 
 .cta-two {
@@ -1065,6 +1081,12 @@ h3 {
   font-size: 4rem;
   border-bottom: 2px solid black;
   padding: 25px;
+}
+@media screen and (max-width: 1200px) {
+  .cta-two {
+    width: 100%;
+    border-top: 2px solid black;
+  }
 }
 .cta-two .cta-two-box {
   display: flex;
@@ -1112,10 +1134,15 @@ h3 {
 .cta-two .cta-form-two form {
   display: flex;
   flex-flow: column nowrap;
-  width: 45%;
+  width: 65%;
   margin: 0 auto;
   margin-top: 5%;
   margin-bottom: 5%;
+}
+@media screen and (max-width: 1200px) {
+  .cta-two .cta-form-two form {
+    width: 100%;
+  }
 }
 .cta-two .cta-form-two form label {
   font-family: var(--body-fnt);

@@ -342,10 +342,14 @@ nav {
   transition: 500ms;
   background-color: var(--bg-clr);
 
+  font-family: var(--body-fnt);
+
 
   a {
       padding-bottom: 10px;
       font-size: 2rem;
+      color: black;
+      text-transform: uppercase;
   }
 
  @media screen and (max-width: 1200px) {
@@ -1034,7 +1038,7 @@ h4 {
   grid-template-rows: auto auto;
   border: 2px solid black;
 
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
 
 
@@ -1372,6 +1376,11 @@ h3 {
   margin-top: 50px;
 
 
+  @media screen and (max-width: 1200px) {
+    flex-flow: column nowrap;
+    
+  }
+
    
 }
 
@@ -1389,6 +1398,8 @@ h3 {
     border-bottom: 2px solid black;
    
     padding: 25px;
+
+
   
 }
 
@@ -1396,6 +1407,9 @@ h3 {
     padding: 75px;
     width: 100%;
 
+    p {
+      width: 90%;
+    }
 
     i {
       padding-right: 10px;
@@ -1414,10 +1428,10 @@ h3 {
 
     #contact-social {
       display: flex;
-      flex-flow: row nowrap;
-      width: 55%;
+      flex-flow: column nowrap;
+      width: 85%;
       margin-top: 25px;
-      font-size: 1.7rem;
+      font-size: 2rem;
 
         p {
           padding-right: 25px;
@@ -1426,6 +1440,10 @@ h3 {
       
     }
   }
+
+@media screen and (max-width: 1200px){
+  width: 100%;
+}
 
 }
 
@@ -1442,7 +1460,15 @@ h3 {
     border-bottom: 2px solid black;
   
     padding: 25px;
+
+
+   
   
+}
+
+@media screen and (max-width: 1200px) {
+  width: 100%;
+  border-top: 2px solid black;
 }
 
 .cta-two-box {
@@ -1515,10 +1541,15 @@ h3 {
     form {
       display: flex;
       flex-flow: column nowrap;
-      width: 45%;
+      width: 65%;
       margin: 0 auto;
       margin-top:5%;
       margin-bottom: 5%;
+
+      @media screen and (max-width: 1200px){
+        width: 100%;
+
+      }
 
       label {
         font-family: var(--body-fnt);
@@ -1598,6 +1629,8 @@ h3 {
       }
       
     }
+
+    
 }
 
 
