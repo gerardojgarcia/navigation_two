@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../images/profile.png":[["profile.8eeaf93c.png","images/profile.png"],"images/profile.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/profile.png":[["profile.8eeaf93c.png","images/profile.png"],"images/profile.png"],"./../images/elacompost_desktop_mockup.png":[["elacompost_desktop_mockup.682eaa4b.png","images/elacompost_desktop_mockup.png"],"images/elacompost_desktop_mockup.png"],"./../images/geo_desktop_mockup.png":[["geo_desktop_mockup.9b906c18.png","images/geo_desktop_mockup.png"],"images/geo_desktop_mockup.png"],"./../images/website_desktop_mockup_verified.png":[["website_desktop_mockup_verified.70c7df41.png","images/website_desktop_mockup_verified.png"],"images/website_desktop_mockup_verified.png"],"./../images/smartphone_mockup.png":[["smartphone_mockup.12ee5614.png","images/smartphone_mockup.png"],"images/smartphone_mockup.png"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "32811" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51750" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

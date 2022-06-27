@@ -118,9 +118,14 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   height: 75px;
-  width: auto;
+  width: 100%;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1200px) {
+  nav {
+    width: auto;
+  }
 }
 
 .logo {
@@ -334,7 +339,7 @@ nav {
   }
 }
 .hero_main .hero-info {
-  width: 100%;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -451,6 +456,7 @@ nav {
   width: 65%;
   margin: 0 auto;
   margin-top: 200px;
+  margin-bottom: 50px;
   border: 2px solid black;
 }
 .about_box h3 {
@@ -696,6 +702,8 @@ nav {
   background-color: #343434;
   border: 2px solid white;
   margin-bottom: 50px;
+  font-size: 1.2rem;
+  color: var(--accent-clr);
 }
 .cta-form form .form-btn {
   display: flex;
@@ -778,8 +786,11 @@ h4 {
 .work-card {
   width: 100%;
   height: 900px;
+  display: flex;
+  flex-flow: column nowrap;
   border-left: 2px solid black;
   margin: 0 auto;
+  overflow: hidden;
 }
 .work-card .work-btn {
   display: flex;
@@ -828,7 +839,7 @@ h4 {
 
 .work-card-title {
   padding: 50px;
-  margin-bottom: 620px;
+  margin-bottom: auto;
 }
 .work-card-title p {
   font-size: 1.5rem;
@@ -844,19 +855,23 @@ h4 {
 }
 
 #work-card1 {
-  background-image: url(/profile.8eeaf93c.png);
+  background-image: url(/elacompost_desktop_mockup.682eaa4b.png);
+  background-size: cover;
 }
 
 #work-card2 {
-  background-image: url(/profile.8eeaf93c.png);
+  background-image: url(/geo_desktop_mockup.9b906c18.png);
+  background-position: center;
+  background-size: cover;
 }
 
 #work-card3 {
-  background-image: url(/profile.8eeaf93c.png);
+  background-image: url(/website_desktop_mockup_verified.70c7df41.png);
+  background-size: cover;
 }
 
 #work-card4 {
-  background-image: url(/profile.8eeaf93c.png);
+  background-image: url(/smartphone_mockup.12ee5614.png);
 }
 
 #work-card5 {
@@ -1010,13 +1025,12 @@ h5 {
   flex-flow: column nowrap;
   width: 100%;
   padding: 75px;
-  width: 100%;
   background-color: #343434;
   color: var(--accent-clr);
 }
 .cta-two .cta-two-box .cta-two-info {
   font-size: 1.7rem;
-  width: 45%;
+  width: 100%;
   padding-left: 50px;
   padding-bottom: 50px;
 }
@@ -1041,6 +1055,73 @@ h5 {
   background-color: #B4FFC9;
 }
 .cta-two .cta-two-box .contact-btn:hover #work-btn-icon {
+  background-color: transparent;
+  transform: rotate(360deg);
+}
+.cta-two .cta-form-two {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+.cta-two .cta-form-two form {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.cta-two .cta-form-two form label {
+  font-family: var(--body-fnt);
+  color: white;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.cta-two .cta-form-two form input {
+  margin-bottom: 50px;
+  border: 2px solid white;
+  background-color: #343434;
+  font-size: 2rem;
+  color: var(--accent-clr);
+  font-family: var(--body-fnt);
+}
+.cta-two .cta-form-two form textarea {
+  background-color: #343434;
+  border: 2px solid white;
+  margin-bottom: 50px;
+}
+.cta-two .cta-form-two form .form-btn {
+  display: flex;
+  background-color: var(--font-clr);
+  border: none;
+  height: 100px;
+  font-size: 3rem;
+  font-family: var(--body-fnt);
+  text-transform: uppercase;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid black;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+.cta-two .cta-form-two form .form-btn #form-btn-icon {
+  background-color: var(--font-clr);
+  transition: all 700ms ease-in-out;
+  transform: rotate(0deg);
+  margin-left: 15px;
+  margin-bottom: 3px;
+  padding: 0px;
+}
+.cta-two .cta-form-two form .form-btn:hover {
+  border: 5px solid black;
+}
+.cta-two .cta-form-two form .form-btn:hover #form-btn-icon {
   background-color: transparent;
   transform: rotate(360deg);
 }
