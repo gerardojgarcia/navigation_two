@@ -125,7 +125,7 @@ header {
     box-sizing: border-box;
 
     @media screen and (max-width: 1200px) {
-      width: auto;
+      width: 100%;
     }
    
 
@@ -143,12 +143,16 @@ nav {
     height: 75px;
     width: 100%;
     justify-content: center;
+
     align-items: center;  
 
   @media screen and (max-width: 1200px) {
-    width: auto;
+    width: 100%;
+    
+    justify-content: space-between;
   }
 
+  
 
 }
 
@@ -170,20 +174,13 @@ nav {
       padding: 0px;
       padding-top: 10px;
       align-items: center;
-      height: 50px;
-      padding-left: 0px;
+      height: 35px;
+      padding-left: 15px;
+      margin-right: 5%;
 
     }
 
-    @media screen and (max-width: 500px){
-      border: none;
-      padding: 0px;
-      padding-top: 10px;
-      align-items: center;
-      height: 50px;
-      padding-left: 0px;
-      
-    }
+  
     
 
 }
@@ -192,7 +189,7 @@ nav {
 
 .nav-links {
     width: 100%;
-    height: 100%;
+    
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -234,130 +231,139 @@ nav {
 
 
 
-.hamburger-btn {
-    display: flex;
-    background-color: var(--bg-clr);
-    //border: 2px solid black;
-    width: 25px;
-    height: 25px;
-    margin: 5px; 
-    margin-right: 15px;
-    margin-left: 215px;
+/*mobile navigation */
+
+.hamburger {
+  position: relative;
+  display: none;
+  width: 24px;
+  height: 24px;
+  transition: all 500ms;
+  cursor: pointer;
+  background-color: transparent;
   border: none;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-    transition: all 500ms;
-    
+  margin-left: 45%;
+  box-sizing: border-box;
 
 
-
-
-    @media screen and (min-width: 1200px) {
-        display: none;
-
-        
-    }
-
-
-}
-
-
-.ham-top, .ham-middle, .ham-bottom {
-
-    width: 25px;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    right: 3px;
-    top: 4px;
-    transform: rotate(0deg);
-    
-
-}
-
-.open {
-  transform: translateY(0px) rotate(90deg);
 
   
 
+
+
+  .hamburger-top, .hamburger-middle, .hamburger-bottom {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 2px;
+      background: #343434;
+      transform: rotate(0);
+      transition: all 500ms ease-in-out;
+  }
+
+
+  .hamburger-middle {
+      transform: translateY(7px);
+
+
+  }
+
+  .hamburger-bottom {
+      transform: translateY(14px);
+      
+
+  }
+
+  @media screen and (max-width: 1200px){
+      display: block;
+  }
+
+
 }
 
-.open .ham-top {
-  transform: translateY(5px) translate(5px) rotate(45deg);
+
+.open {
+  transform: rotate(90deg) translateY(0px);
+
 }
 
-.open .ham-middle {
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+
+}
+
+
+.open .hamburger-middle {
   display: none;
 
 }
 
-
-.open .ham-bottom {
-  transform: translateY(5px) tralsate(5px);
-  transform: rotate(-45deg);
-
-}
-
-.ham-middle {
-    transform: translateY(7px);
-
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
 
-
-.ham-bottom {
-    transform: translateY(14px);
+@media screen and (max-width: 1200px) {
+  .mobile-menu {
+      display: hidden;
+  }
 }
 
 
-.mobile-menu {
-    display: flex;
-    visibility: hidden;
-    flex-flow: column nowrap;
-    width: 50%;
-    left: 50%;
-    margin-top: 50px;
-    height: 100vh;
-    position: absolute;
+
+
+
+.menu-link {
+  transition: 500ms ease-in;
+}
+
+
+.menu-items {   
+
+  display: none;
+  opacity: 0;
+  flex-flow: column nowrap;
+  justify-self: flex-end; 
+  align-items: center;
+  padding-top: 50vw;
+  margin-top: 24px;
+  font-weight: bold;
+  
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom: 10px;
+  position: absolute;
+  transition: 500ms;
+  background-color: var(--bg-clr);
+
+
+  a {
+      padding-bottom: 10px;
+      font-size: 2rem;
+  }
+
+ @media screen and (max-width: 1200px) {
+  width: 50%;
+  height: 100vh;
+  left: 50%;
+  display: none;
+
+
+  
+ }
+
+ @media screen and (min-width: 1200px) {
+  opacity: 0;
+  display: none;
+
+
+  
+ }
  
-    
-    
-    
 
+ 
 
-}
-
-
-.menu-links {
-    display: flex;
-    flex-flow: column nowrap;
-    background-color: var(--accent-clr);
-    height: 100vh;
-    
-    padding-top: 25%;
-    justify-content: center;
-    align-items: center;
-    
-    width: 100%;
-    
-
-    a {
-        font-size: 2rem;
-        text-decoration: none;
-        font-family: var(--title-fnt);
-        border: 2px solid black;
-        margin: 10px;
-        text-align: center;
-        width: 65%;
-        text-transform: uppercase;
-        color: black;
-        
-    }
-
-    
 }
 
 
@@ -394,7 +400,7 @@ nav {
 
 
   @media screen and (min-width: 1200px) {
-    width: auto;
+    width: 100%;
     
   }
 
@@ -417,7 +423,7 @@ nav {
   height: 100vh;
 
   @media screen and (max-width: 1200px) {
-    width: auto;
+    width: 100%;
     margin-top: 75px;
 
     
@@ -435,7 +441,7 @@ nav {
 
   @media screen and (max-width: 1200px) {
     flex-flow: column-reverse nowrap;
-    width: auto;
+    width: 100;
   }
 
 
@@ -1055,6 +1061,8 @@ h4 {
   border-left: 2px solid black;
   margin: 0 auto;
   
+  transition: all 500ms;
+  
 
 
 
@@ -1110,11 +1118,23 @@ h4 {
       
 
     }
+
+
+
+
+  }
+
+  &:hover .work-card-title {
+    visibility: visible;
+    opacity: 1;
+    background-color: #343434;
+    color:white;
+
   }
   
   @media screen and (max-width: 768px){
     width: auto;
-    height: 500px;
+    height: 400px;
 
 
     .work-btn {
@@ -1129,6 +1149,16 @@ h4 {
 .work-card-title {
   padding: 50px;
   margin-bottom: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  visibility: hidden;
+  transition: opacity 500ms linear;
+  opacity: 0;
+  
+
+
+
+
 
 
 
@@ -1146,7 +1176,12 @@ h4 {
 
   @media screen and (max-width: 768px){
     width: auto;
-    margin-bottom: 220px;
+    margin-bottom: auto;
+    visibility: visible;
+    transition: all 500ms;
+    opacity: 1;
+    color:white;
+    background-color: #34343474;
     
   }
 
@@ -1155,23 +1190,35 @@ h4 {
 #work-card1 {
   background-image: url(../images/elacompost_desktop_mockup.png);
   background-size: cover;
+  background-repeat: none;
+  background-position: center;
+
 
 }
 #work-card2 {
   background-image: url(../images/geo_desktop_mockup.png);
   background-position: center;
   background-size: cover;
+  background-repeat: none;
 }
 
 #work-card3 {
   background-image: url(../images/website_desktop_mockup_verified.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: none;
 }
 #work-card4 {
   background-image: url(../images/smartphone_mockup.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
 }
 #work-card5 {
   background-image: url(../images/profile.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
 }
 
 

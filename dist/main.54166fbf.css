@@ -109,7 +109,7 @@ header {
 }
 @media screen and (max-width: 1200px) {
   header {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -124,7 +124,8 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   nav {
-    width: auto;
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -145,24 +146,14 @@ nav {
     padding: 0px;
     padding-top: 10px;
     align-items: center;
-    height: 50px;
-    padding-left: 0px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .logo {
-    border: none;
-    padding: 0px;
-    padding-top: 10px;
-    align-items: center;
-    height: 50px;
-    padding-left: 0px;
+    height: 35px;
+    padding-left: 15px;
+    margin-right: 5%;
   }
 }
 
 .nav-links {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
@@ -190,94 +181,99 @@ nav {
   }
 }
 
-.hamburger-btn {
-  display: flex;
-  background-color: var(--bg-clr);
-  width: 25px;
-  height: 25px;
-  margin: 5px;
-  margin-right: 15px;
-  margin-left: 215px;
-  border: none;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+/*mobile navigation */
+.hamburger {
   position: relative;
+  display: none;
+  width: 24px;
+  height: 24px;
   transition: all 500ms;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-left: 45%;
+  box-sizing: border-box;
 }
-@media screen and (min-width: 1200px) {
-  .hamburger-btn {
-    display: none;
+.hamburger .hamburger-top, .hamburger .hamburger-middle, .hamburger .hamburger-bottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: #343434;
+  transform: rotate(0);
+  transition: all 500ms ease-in-out;
+}
+.hamburger .hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger .hamburger-bottom {
+  transform: translateY(14px);
+}
+@media screen and (max-width: 1200px) {
+  .hamburger {
+    display: block;
   }
 }
 
-.ham-top, .ham-middle, .ham-bottom {
-  width: 25px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  right: 3px;
-  top: 4px;
-  transform: rotate(0deg);
-}
-
 .open {
-  transform: translateY(0px) rotate(90deg);
+  transform: rotate(90deg) translateY(0px);
 }
 
-.open .ham-top {
-  transform: translateY(5px) translate(5px) rotate(45deg);
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
 }
 
-.open .ham-middle {
+.open .hamburger-middle {
   display: none;
 }
 
-.open .ham-bottom {
-  transform: translateY(5px) tralsate(5px);
-  transform: rotate(-45deg);
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
 
-.ham-middle {
-  transform: translateY(7px);
+@media screen and (max-width: 1200px) {
+  .mobile-menu {
+    display: hidden;
+  }
+}
+.menu-link {
+  transition: 500ms ease-in;
 }
 
-.ham-bottom {
-  transform: translateY(14px);
-}
-
-.mobile-menu {
-  display: flex;
-  visibility: hidden;
+.menu-items {
+  display: none;
+  opacity: 0;
   flex-flow: column nowrap;
-  width: 50%;
-  left: 50%;
-  margin-top: 50px;
-  height: 100vh;
-  position: absolute;
-}
-
-.menu-links {
-  display: flex;
-  flex-flow: column nowrap;
-  background-color: var(--accent-clr);
-  height: 100vh;
-  padding-top: 25%;
-  justify-content: center;
+  justify-self: flex-end;
   align-items: center;
-  width: 100%;
+  padding-top: 50vw;
+  margin-top: 24px;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  transition: 500ms;
+  background-color: var(--bg-clr);
 }
-.menu-links a {
+.menu-items a {
+  padding-bottom: 10px;
   font-size: 2rem;
-  text-decoration: none;
-  font-family: var(--title-fnt);
-  border: 2px solid black;
-  margin: 10px;
-  text-align: center;
-  width: 65%;
-  text-transform: uppercase;
-  color: black;
+}
+@media screen and (max-width: 1200px) {
+  .menu-items {
+    width: 50%;
+    height: 100vh;
+    left: 50%;
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-items {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .flex {
@@ -308,7 +304,7 @@ nav {
 }
 @media screen and (min-width: 1200px) {
   .container__main {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -321,7 +317,7 @@ nav {
 }
 @media screen and (max-width: 1200px) {
   .hero {
-    width: auto;
+    width: 100%;
     margin-top: 75px;
   }
 }
@@ -335,7 +331,7 @@ nav {
 @media screen and (max-width: 1200px) {
   .hero_main {
     flex-flow: column-reverse nowrap;
-    width: auto;
+    width: 100;
   }
 }
 .hero_main .hero-info {
@@ -790,6 +786,7 @@ h4 {
   flex-flow: column nowrap;
   border-left: 2px solid black;
   margin: 0 auto;
+  transition: all 500ms;
   overflow: hidden;
 }
 .work-card .work-btn {
@@ -827,10 +824,16 @@ h4 {
   background-color: rgba(180, 255, 201, 0);
   transform: rotate(360deg);
 }
+.work-card:hover .work-card-title {
+  visibility: visible;
+  opacity: 1;
+  background-color: #343434;
+  color: white;
+}
 @media screen and (max-width: 768px) {
   .work-card {
     width: auto;
-    height: 500px;
+    height: 400px;
   }
   .work-card .work-btn {
     font-size: 2rem;
@@ -840,6 +843,11 @@ h4 {
 .work-card-title {
   padding: 50px;
   margin-bottom: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  visibility: hidden;
+  transition: opacity 500ms linear;
+  opacity: 0;
 }
 .work-card-title p {
   font-size: 1.5rem;
@@ -850,32 +858,48 @@ h4 {
 @media screen and (max-width: 768px) {
   .work-card-title {
     width: auto;
-    margin-bottom: 220px;
+    margin-bottom: auto;
+    visibility: visible;
+    transition: all 500ms;
+    opacity: 1;
+    color: white;
+    background-color: rgba(52, 52, 52, 0.4549019608);
   }
 }
 
 #work-card1 {
   background-image: url(/elacompost_desktop_mockup.682eaa4b.png);
   background-size: cover;
+  background-repeat: none;
+  background-position: center;
 }
 
 #work-card2 {
   background-image: url(/geo_desktop_mockup.9b906c18.png);
   background-position: center;
   background-size: cover;
+  background-repeat: none;
 }
 
 #work-card3 {
   background-image: url(/website_desktop_mockup_verified.70c7df41.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: none;
 }
 
 #work-card4 {
   background-image: url(/smartphone_mockup.12ee5614.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
 }
 
 #work-card5 {
   background-image: url(/profile.8eeaf93c.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
 }
 
 /* Experience Style */

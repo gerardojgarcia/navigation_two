@@ -119,9 +119,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 var navItemEl = document.getElementById('nav-link');
-var hamBtn = document.getElementById('ham-btn');
+var hamBtn = document.getElementById('hamburger-btn');
 var navItems = document.querySelector('.nav-links');
-var mobileMenu = document.querySelector('.mobile-menu');
+var mobileMenu = document.querySelector('.menu-items');
 var navHome = document.getElementById('nav-home');
 var navAbout = document.getElementById('nav-about');
 var navWork = document.getElementById('nav-work');
@@ -130,6 +130,9 @@ var navContact = document.getElementById('nav-contact');
 hamBtn.addEventListener('click', function () {
   console.log('i was clicked');
   hamBtn.classList.toggle('open');
+  mobileMenu.classList.toggle('visible');
+  mobileMenu.classList.toggle('flex');
+  mobileMenu.classList.toggle('opacity');
   mobileMenu.classList.toggle('visible');
 }); //// Navigation 'Selected' Style///
 
@@ -209,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51750" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43091" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

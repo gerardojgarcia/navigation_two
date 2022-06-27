@@ -1,7 +1,7 @@
 const navItemEl = document.getElementById('nav-link')
-const hamBtn = document.getElementById('ham-btn')
+const hamBtn = document.getElementById('hamburger-btn')
 const navItems = document.querySelector('.nav-links')
-const mobileMenu = document.querySelector('.mobile-menu')
+const mobileMenu = document.querySelector('.menu-items')
 
 
 const navHome = document.getElementById('nav-home')
@@ -16,6 +16,9 @@ const navContact = document.getElementById('nav-contact')
 hamBtn.addEventListener('click', () => {
     console.log('i was clicked')
     hamBtn.classList.toggle('open')
+    mobileMenu.classList.toggle('visible')
+    mobileMenu.classList.toggle('flex')
+    mobileMenu.classList.toggle('opacity')
     mobileMenu.classList.toggle('visible')
 
 })
