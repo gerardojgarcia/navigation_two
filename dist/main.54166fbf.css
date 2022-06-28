@@ -376,9 +376,12 @@ nav {
   }
   .hero_main .hero-info .hero-info-content h1 {
     font-size: 3rem;
+    padding: 25px;
   }
   .hero_main .hero-info .hero-info-content h2 {
     font-size: 1.5rem;
+    padding: 25px;
+    padding-bottom: 5px;
   }
 }
 .hero_main .hero-info .hero-btn {
@@ -418,7 +421,7 @@ nav {
 }
 @media screen and (min-width: 2200px) {
   .hero_main .hero-info .hero-btn {
-    margin-top: 36%;
+    margin-top: 25%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1042,6 +1045,8 @@ h3 {
 .contact-info .contact-info-details {
   padding: 75px;
   width: 100%;
+  margin-top: 15vh;
+  margin-left: 15vh;
 }
 .contact-info .contact-info-details p {
   width: 90%;
@@ -1050,10 +1055,20 @@ h3 {
   padding-right: 10px;
 }
 .contact-info .contact-info-details #contact-email {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact-info .contact-info-details #contact-email {
+    font-size: 1.5rem;
+  }
 }
 .contact-info .contact-info-details #contact-phone {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .contact-info .contact-info-details #contact-phone {
+    font-size: 1.5rem;
+  }
 }
 .contact-info .contact-info-details #contact-social {
   display: flex;
@@ -1064,6 +1079,14 @@ h3 {
 }
 .contact-info .contact-info-details #contact-social p {
   padding-right: 25px;
+}
+.contact-info .contact-info-details #contact-social a {
+  color: black;
+}
+@media screen and (max-width: 1200px) {
+  .contact-info .contact-info-details {
+    margin: 0px;
+  }
 }
 @media screen and (max-width: 1200px) {
   .contact-info {
