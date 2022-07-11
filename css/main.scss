@@ -91,8 +91,8 @@ a {
 
 
     --bg-clr: #d9dad8;
-    --accent-clr: #B4FFC9;
-    --font-clr: #CDB4ff;
+    --accent-clr: #333533;
+    --font-clr: #F5CB5C;
 
     --body-fnt: "Helvetica";
     --title-fnt: 'Martel Sans', sans-serif;
@@ -221,6 +221,7 @@ nav {
 
         &:hover {
           background-color: var(--accent-clr);
+          color: white;
         }
 
         
@@ -765,7 +766,7 @@ nav {
   transition: all 500ms linear;
  z-index: 10;
   position: relative;
-  background-color: var(--accent-clr);
+  background-color: var(--font-clr);
 
   
 
@@ -802,14 +803,15 @@ nav {
   align-items: center;
   border: 2px solid black;
   text-decoration: none;
-  color: black;
+  color: white;
   background-color: var(--accent-clr);
 
   font-family: var(--body-fnt);
   transition: all 300ms linear;
 
   &:hover {
-    background-color: #CDB4ff;
+    background-color: var(--font-clr);
+    color: black;
     box-shadow: 4px 5px 0px 2px black;
     transform: translateY(-2px) translateX(-2px);
   }
@@ -906,7 +908,7 @@ nav {
       font-size: 3.9rem;
       width: 65%;
       margin: 0 auto;
-      color: var(--accent-clr);
+      color: var(--font-clr);
 
 
     }
@@ -1120,7 +1122,8 @@ h4 {
     &:hover  {
 
       border: 5px solid black;
-      background-color: #B4FFC9;
+      background-color: var(--accent-clr);
+      color: white;
 
 
       #work-btn-icon{
