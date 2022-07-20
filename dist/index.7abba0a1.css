@@ -319,7 +319,7 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .hero_main {
-    width: 100px;
+    width: 100%;
     flex-flow: column-reverse;
   }
 }
@@ -333,7 +333,7 @@ nav {
 
 @media screen and (max-width: 1200px) {
   .hero_main .hero-info {
-    width: auto;
+    width: 100%;
   }
 }
 
@@ -362,11 +362,13 @@ nav {
   }
 
   .hero_main .hero-info .hero-info-content h1 {
+    width: 100%;
     padding: 25px;
     font-size: 3rem;
   }
 
   .hero_main .hero-info .hero-info-content h2 {
+    width: 100%;
     padding: 25px 25px 5px;
     font-size: 1.5rem;
   }
@@ -938,6 +940,7 @@ h4 {
 .experience__container {
   width: 100%;
   font-family: var(--body-fnt);
+  align-self: center;
 }
 
 h3 {
@@ -951,6 +954,7 @@ h3 {
 .experience__list {
   width: 100%;
   flex-flow: column;
+  align-self: center;
   margin-top: 100px;
   padding-bottom: 100px;
   display: flex;
@@ -1215,7 +1219,7 @@ h3 {
 }
 
 .cta-two .cta-form-two form input {
-  color: var(--accent-clr);
+  color: #fff;
   font-size: 2rem;
   font-family: var(--body-fnt);
   background-color: #343434;
@@ -1224,9 +1228,11 @@ h3 {
 }
 
 .cta-two .cta-form-two form textarea {
+  color: #fff;
   background-color: #343434;
   border: 2px solid #fff;
   margin-bottom: 50px;
+  font-size: 2rem;
 }
 
 .cta-two .cta-form-two form .form-btn {

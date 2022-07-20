@@ -451,7 +451,8 @@ nav {
 
   @media screen and (max-width: 1200px) {
     flex-flow: column-reverse nowrap;
-    width: 100;
+    width: 100%;
+   
   }
 
 
@@ -464,7 +465,7 @@ nav {
 
 
     @media screen and (max-width: 1200px) {
-      width: auto;
+      width: 100%;
       
     }
     
@@ -501,6 +502,7 @@ nav {
         h1 {
           font-size: 3rem;
           padding: 25px;
+          width: 100%;
 
         }
 
@@ -508,6 +510,7 @@ nav {
           font-size: 1.5rem;
           padding: 25px;
           padding-bottom: 5px;
+          width: 100%;
         }
 
 
@@ -605,6 +608,7 @@ nav {
 
     @media screen and (max-width: 1200px) {
       width: 100%;
+      
       
 
     }
@@ -1249,6 +1253,7 @@ h4 {
 .experience__container {
     width: 100%;
     font-family: var(--body-fnt);
+    align-self: center;
 
 }
 
@@ -1266,6 +1271,8 @@ h3 {
     flex-flow: column nowrap;
     margin-top: 100px;
     padding-bottom: 100px;
+    
+    align-self: center;
 
    
 
@@ -1597,7 +1604,7 @@ h3 {
         border: 2px solid white;
         background-color: #343434;
         font-size: 2rem;
-        color: var(--accent-clr);
+        color: white;
         font-family: var(--body-fnt);
 
       }
@@ -1606,6 +1613,8 @@ h3 {
         background-color: #343434;
         border: 2px solid white;
         margin-bottom: 50px;
+        color: white;
+        font-size: 2rem;
 
       }
 

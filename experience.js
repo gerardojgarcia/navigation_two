@@ -8,6 +8,8 @@ const pccEl = document.getElementById('pcc')
 const organicEl = document.getElementById('301')
 const puroEl = document.getElementById('puro')
 const hundEl = document.getElementById('hundley')
+const monarchEl = document.getElementById('monarch')
+
 
 
 
@@ -23,6 +25,7 @@ const eduPccEl = document.getElementById('edu-pcc')
 const expOrganicEl = document.getElementById('exp-301')
 const expPuroEl = document.getElementById('exp-puro')
 const expHundEl = document.getElementById('exp-hundley')
+const expMonarchEl = document.getElementById('exp-monarch')
 
 
 
@@ -107,3 +110,10 @@ hundEl.addEventListener('click', () => {
 })
 
 
+monarchEl.addEventListener('click', () => {
+
+    expMonarchEl.classList.toggle('exp-display')
+    monarchEl.classList.toggle('selected')
+
+
+})

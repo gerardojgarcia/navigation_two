@@ -8,6 +8,7 @@ const pccEl = document.getElementById("pcc");
 const organicEl = document.getElementById("301");
 const puroEl = document.getElementById("puro");
 const hundEl = document.getElementById("hundley");
+const monarchEl = document.getElementById("monarch");
 const expChicanoEl = document.getElementById("exp-chicano");
 const expLacmaEl = document.getElementById("exp-lacma");
 const expVpamEl = document.getElementById("exp-vpam");
@@ -18,6 +19,7 @@ const eduPccEl = document.getElementById("edu-pcc");
 const expOrganicEl = document.getElementById("exp-301");
 const expPuroEl = document.getElementById("exp-puro");
 const expHundEl = document.getElementById("exp-hundley");
+const expMonarchEl = document.getElementById("exp-monarch");
 //chicanoEl.addEventListener('click', () => {
 //  console.log('chicano')
 //   expChicanoEl.classList.toggle('exp-display')
@@ -69,6 +71,10 @@ selfEl.addEventListener("click", ()=>{
 hundEl.addEventListener("click", ()=>{
     expHundEl.classList.toggle("exp-display");
     hundEl.classList.toggle("selected");
+});
+monarchEl.addEventListener("click", ()=>{
+    expMonarchEl.classList.toggle("exp-display");
+    monarchEl.classList.toggle("selected");
 });
 
 //# sourceMappingURL=index.b0352688.js.map
